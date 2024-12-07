@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<style>
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: url('https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif') center center;
+        background-size: cover;
+        opacity: 0.3;
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Form</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+            animation: backgroundDisco 2s linear infinite; /* Faster change for disco effect */
+            background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ffff00, #ff00ff, #00ffff);
+            background-size: 600% 600%; /* Increase background size for more color transition */
+        }
+
+        /* Disco lights animation */
+        @keyframes backgroundDisco {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 50% 50%; }
+            50% { background-position: 100% 50%; }
+            75% { background-position: 50% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Form header styling */
+        h1 {
+            text-align: center;
+            color: #fff;
+            animation: fadeIn 2s ease-out;
+            font-size: 3rem;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Form container styling */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        /* Input and textarea styling */
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Input/textarea focus effect */
+        input:focus, textarea:focus {
+            border-color: #ff7f50;
+            background-color: rgba(255, 255, 255, 0.2);
+            outline: none;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #ff7f50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            width: 100%;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #ff6347;
+        }
+
+        /* Form container margin and padding adjustments */
+        form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            animation: slideUp 1s ease-out;
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #333, #555);
+        }
+
+        /* Form background animation */
+        form::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            opacity: 0.2;
+            border-radius: 12px;
+        }
+
+        /* Slide-up animation for the form */
+        @keyframes slideUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Hover effect for textareas */
+        textarea:hover, input:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Adjust textarea height */
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <h1>FIGHT-TECH Form</h1>
+
+    <form id="cvForm">
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required placeholder="Enter your address"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="education">Education:</label>
+            <textarea id="education" name="education" rows="4" required placeholder="Enter your education details"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Work Experience:</label>
+            <textarea id="experience" name="experience" rows="6" required placeholder="Enter your work experience"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" rows="4" required placeholder="Enter your skills"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="languages">Languages Known:</label>
+            <textarea id="languages" name="languages" rows="2" required placeholder="Enter languages known"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="projects">Projects:</label>
+            <textarea id="projects" name="projects" rows="4" required placeholder="Enter your projects"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="certifications">Certifications:</label>
+            <textarea id="certifications" name="certifications" rows="3" required placeholder="Enter certifications"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="hobbies">Hobbies & Interests:</label>
+            <textarea id="hobbies" name="hobbies" rows="2" required placeholder="Enter your hobbies"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="references">References:</label>
+            <textarea id="references" name="references" rows="3" required placeholder="Enter your references"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="linkedin">LinkedIn Profile:</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/yourprofile">
+        </div>
+        <button type="submit">Submit CV</button>
+    </form>
+
+    <script>
+        document.getElementById('cvForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted successfully!');
+        });
+    </script>
+</body>
+</html>
